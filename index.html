@@ -4,7 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Trevor Nanney — Tech Noir</title>
+    <meta name="keywords" content="trevor nanney, portfolio, web developer, ui ux, front-end developer, memphis" />
+    <meta name="description" content="Trevor Nanney — web developer building friendly, modern web experiences with a human touch." />
+    <meta name="author" content="Trevor Nanney" />
+    <title>Trevor Nanney — Portfolio</title>
+
+    <meta property="og:title" content="Trevor Nanney — Portfolio" />
+    <meta property="og:description" content="Web developer building friendly, modern web experiences with a human touch." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trevornanney.net/" />
+    <meta property="og:image" content="https://trevornanney.net/root/resources/images/trevor-headshot.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Trevor Nanney — Portfolio" />
+    <meta name="twitter:description" content="Web developer building friendly, modern web experiences with a human touch." />
+    <meta name="twitter:image" content="https://trevornanney.net/root/resources/images/trevor-headshot.jpg" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E91PB34MWF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E91PB34MWF');
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,9 +144,12 @@
                 <p>trevornanney@gmail.com</p>
                 <p><a href="https://www.linkedin.com/in/trevor-nanney/">LinkedIn: Trevor Nanney</a></p>
             </div>
-            <form class="contact-form" name="contact" method="POST" netlify data-netlify="true">
+            <form class="contact-form" name="contact" method="POST" action="/success" netlify data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact">
                 <input type="hidden" name="subject" value="Portfolio Contact">
+                <p class="sr-only">
+                    <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+                </p>
                 <label>
                     Name
                     <input type="text" name="name" required>
