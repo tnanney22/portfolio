@@ -234,18 +234,52 @@ main {
     gap: 24px;
 }
 
-.pill-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
 }
 
-.pill-grid span {
-    padding: 8px 12px;
-    border-radius: 999px;
+.badge {
+    background: rgba(10, 12, 18, 0.7);
     border: 1px solid var(--border);
-    font-size: 0.8rem;
+    border-radius: 16px;
+    padding: 14px 16px;
+    display: grid;
+    gap: 6px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.badge::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.badge-title {
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.badge-sub {
     color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.neon-cyan::after {
+    background: radial-gradient(circle at 20% 20%, rgba(94, 246, 255, 0.6), transparent 60%);
+}
+
+.neon-magenta::after {
+    background: radial-gradient(circle at 20% 20%, rgba(255, 59, 191, 0.6), transparent 60%);
+}
+
+.neon-lime::after {
+    background: radial-gradient(circle at 20% 20%, rgba(199, 255, 77, 0.6), transparent 60%);
 }
 
 .contact {
